@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/home",
+    "pages/classcation/classcation",
+    "pages/shoppingCart/shoppingCart",
+    "pages/members/members",
+    "Component/maps/maps",
+    "pages/shops/shops"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "解忧食客铺",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "imgs/homeUncheck.png",
+        "selectedIconPath": "imgs/homeActive.png"
+      },
+      {
+        "pagePath": "pages/classcation/classcation",
+        "text": "全部分类",
+        "iconPath": "imgs/classuncheck.png",
+        "selectedIconPath": "imgs/classActive.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "text": "购物车",
+        "iconPath": "imgs/shopCartUncheck.png",
+        "selectedIconPath": "imgs/shopActive.png"
+      },
+      {
+        "pagePath": "pages/members/members",
+        "text": "会员中心",
+        "iconPath": "imgs/membersUncheck.png",
+        "selectedIconPath": "imgs/membersActive.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

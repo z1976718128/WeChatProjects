@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "解忧食客铺",
+  "usingComponents": {
+    "seach":"/Component/seach/seach"
+  }
+}
