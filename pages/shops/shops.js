@@ -7,20 +7,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-      
+      shopArr:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options.id)
-    if (options.id){
-      this.setData({
-        shopData: data.dataList[2],
-      }) 
+    let shopData = data.dataList[2]
+    for (var i = 0; i < shopData.length;i++){
+      if (options.id == shopData[i].id){
+          this.setData({
+            shopArr: shopData[i]
+          })
+      }
+        
     }
-   
+    wx.setNavigationBarTitle({
+      title: options.title
+    })
   },
 
   /**

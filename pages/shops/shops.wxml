@@ -1,4 +1,4 @@
 <!--pages/shops/shops.wxml-->
-<view wx:for="{{shopData}}"  wx:for-item="item">
-  <image src='{{item.imgs}}'></image>
+<view>
+  <image src='{{shopArr.imgs}}'></image>1111
 </view>

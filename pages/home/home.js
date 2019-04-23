@@ -8,14 +8,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    Acrab:[]
   },
   goShops:function(e){
     // console.log(e)
     var shopId = e.currentTarget.dataset.id
-     wx.navigateTo({
-       url: '/pages/shops/shops?id='+shopId,
-     })
+    var than =this
+    let arr2 = than.data.Acrab
+    for(var i=0;i<arr2.length;i++){
+      let shop = arr2
+      wx.navigateTo({
+        url: '/pages/shops/shops?id=' + shopId + '&title=' + shop[shopId-1].text,
+        // 
+      })
+    }
+     
   },
   /**
    * 生命周期函数--监听页面加载
