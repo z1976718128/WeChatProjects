@@ -1,12 +1,12 @@
 <!--logs.wxml-->
 <!-- 组件搜索框 -->
-<seach></seach>
+<seach bindtap="gotoSeach"></seach>
 <!-- swiper轮播 -->
 <swiper class='swiper_post' indicator-dots="true" autoplay="true" interval="3000" indicator-active-color="#fff" >
-    <swiper-item wx:for="{{dataList}}"  wx:for-item="item" wx:key="item.id">
-        <image src="{{item.imgs}}"></image>
-    </swiper-item>
-</swiper>
+      <swiper-item  wx:for="{{dataList}}"  wx:for-item="item" wx:key="item.id">
+          <image src="{{item.imgs}}"></image>
+      </swiper-item>
+  </swiper>
 <!-- 公告 -->
 <view class='news'>
    <text>热点</text>
@@ -38,8 +38,8 @@
 </view>
 <!-- 美食 -->
 <view class='shopInfo'>
-    <view class='shopInfo_item' wx:for="{{Acrab}}"  wx:for-item="item" wx:key="item.id" bindtap='goShops'data-id="{{item.id}}">
-      <image class='shopInfo_img' src='{{item.imgs}}'></image>
+    <view class='shopInfo_item' wx:for="{{Acrab}}"  wx:for-item="item" wx:key="item.id" >
+      <image bindtap='goShops' data-id="{{item.id}}" class='shopInfo_img' src='{{item.imgs}}'></image>
       <view><text>{{item.text}}</text></view>
       <view><text class='price'>原价:￥{{item.oddPrice}}</text><text>已售{{item.sold}}</text></view>
       <view>

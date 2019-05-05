@@ -1,4 +1,87 @@
 <!--pages/shops/shops.wxml-->
+<swiper class='swiper_post' indicator-dots="true" autoplay="true" interval="3000" indicator-active-color="#fff" >
+      <swiper-item  wx:for="{{shopArr.banner}}"  wx:for-item="item" wx:key="item.id">
+          <image src="{{item.bannerImg}}"></image>
+      </swiper-item>
+  </swiper>
 <view>
-  <image src='{{shopArr.imgs}}'></image>1111
+  <view class='frist'>
+    <view >
+        <text>{{shopArr.text}}</text>
+        <text>分享</text>
+    </view>
+    <text>￥{{shopArr.price}}</text>
+    <view>
+        <text>快递:{{shopArr.Courier}}</text>
+        <text>销量:{{shopArr.sales}}件</text>
+    </view>
+  </view>
+  <view class='two'>
+      <view class='youh'><text>优惠卷</text><text>￥5</text><image src='/imgs/right.svg' class='ico'></image></view>
+      <view class='hd'>
+          <view class='fris'>活动</view>
+          <view>
+              <view><text><text class='colors'>满减</text>全场满300立减20；</text></view>
+              <view class='hides'><text class='txs'><text class='colors'>包邮</text>全场满100包邮单品买2件包邮，单品买100</text></view>
+          </view>
+          <view><image src='/imgs/right.svg' class='ico'></image></view>  
+      </view>
+  </view>
+  <view class='sex' bindtap='showMolde'>
+      <view>
+          <text wx:if="{{variable>1}}">已选:数量x{{variable}}</text>
+          <text wx:else>请选择数量</text>
+          <image src='/imgs/right.svg' class='ico'></image>
+      </view>
+  </view>
+  <view class='shops'>
+      <image src="/imgs/sk.jpg"></image>
+      <view class='shoptext'>
+          <view >解忧食客铺</view>
+          <view>人而忧则食而忧，食解忧则人无忧</view>
+      </view>
+  </view>
+  <view class='foots'>
+      <text>商品详情</text>
+  </view>
+  <view class='shopCart'>
+      <view class='item'>
+        <view bindtap='onCollectionTap'>
+            <image wx:if="{{collected}}" src='/imgs/gzxz.svg'></image>
+            <image wx:else src='/imgs/gz.svg'></image>
+            <text style='font-size:30rpx;'>{{collected?"已关注":"关注"}}</text>
+        </view>
+        <view>
+            <image src='/imgs/dp.svg'></image>
+            <text style='font-size:30rpx;'>店铺</text>
+        </view>
+        <view>
+            <image src='/imgs/gwc.svg'></image>
+            <text style='font-size:30rpx;'>购物车</text>
+        </view>
+      </view>
+      <view class='cart'><text>加入购物车</text></view>
+      <view class='mai'><text>立即购买</text></view>
+  </view>
+  <view class='bounced' wx:if="{{showModles}}" catchtouchmove='ture'>
+      <view class='titles' >
+          <image class='sjop' src='{{shopArr.imgs}}'></image>
+          <text class='bounced_text'>￥{{shopArr.price}}</text>
+          <image catchtap='hide' class='sc' src='/imgs/sc.svg'></image>
+      </view> 
+      <view class='nums'  wx:if="{{showModles}}">
+          <text class='numtext'>数量</text>
+          <view class="click">
+              <button catchtap='reduction'>-</button>
+              <text class='cont'>{{variable}}</text>
+              <button catchtap='add'>+</button>
+          </view>
+          <view class="determine" catchtap='selected'>
+              <text>确定</text>
+          </view>
+      </view>
+  </view>
+  <view wx:if="{{showModles}}" class='shadow'  catchtouchmove='ture'></view>
 </view>
+
+               

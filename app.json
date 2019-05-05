@@ -6,7 +6,9 @@
     "pages/shoppingCart/shoppingCart",
     "pages/members/members",
     "Component/maps/maps",
-    "pages/shops/shops"
+    "pages/shops/shops",
+    "Component/swiper/swiper",
+    "pages/seachs/seachs.wxml"
   ],
   "window": {
     "backgroundTextStyle": "dark",
@@ -21,6 +23,7 @@
         "text": "首页",
         "iconPath": "imgs/homeUncheck.png",
         "selectedIconPath": "imgs/homeActive.png"
+
       },
       {
         "pagePath": "pages/classcation/classcation",

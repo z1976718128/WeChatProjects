@@ -1,0 +1,6 @@
+<!--Component/swiper/swiper.wxml-->
+<swiper class='swiper_post' indicator-dots="true" autoplay="true" interval="3000" indicator-active-color="#fff" >
+      <swiper-item  wx:for="{{dataList}}"  wx:for-item="item" wx:key="item.id">
+          <image src="{{item.imgs}}"></image>
+      </swiper-item>
+  </swiper>

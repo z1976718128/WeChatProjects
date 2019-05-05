@@ -1,0 +1,10 @@
+/* Component/swiper/swiper.wxss */
+.swiper_post{
+  width: 100%;
+  height: 300rpx;
+}
+.swiper_post image{
+  width: 100%;
+  height: 300rpx;
+  
+}

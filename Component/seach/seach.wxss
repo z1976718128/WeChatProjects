@@ -10,7 +10,8 @@
 }
 .seach input{
   width: 80%;
-  height: 20rpx;
+  height: 50rpx;
+  line-height: 80rpx;
   background: #fff;
   border-radius: 9rpx;
   font-size: 22rpx;
